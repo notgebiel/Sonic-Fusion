@@ -4,11 +4,36 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Start from './routes/start';
+import OverOnsPage from './routes/over-ons';
+import PrijzenPage from './routes/prijzen';
+import BoekenPage from './routes/boeken';
+import MerchPage from './routes/merch';
+import SocialsPage from './routes/socials';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Start />
+  },
+  {
+    path: '/over_ons',
+    element: <OverOnsPage />
+  },
+  {
+    path: '/prijzen',
+    element: <PrijzenPage />
+  },
+  {
+    path: '/boeken',
+    element: <BoekenPage />
+  },
+  {
+    path: '/merch',
+    element: <MerchPage />
+  },
+  {
+    path: '/socials',
+    element: <SocialsPage />
   }
 ])
 

@@ -16,14 +16,15 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    padding-right: 1rem;
   }
 
   #navli a:hover {
-    background-color: #060638;
+    background-color: #05052c;
   }
 
   .active {
-    background-color: #060638;
+    background-color: #05052c;
   }
 
   .navbardiv {
