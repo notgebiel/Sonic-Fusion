@@ -1,0 +1,21 @@
+.starttopdiv {
+    display: flex;
+    align-items: center;
+}
+
+.starttoptekstdiv {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.starttopfotodiv {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.starttopfotodiv img{
+    max-width: 100%;
+    height: auto;
+}
