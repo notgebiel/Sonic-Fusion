@@ -16,7 +16,7 @@ export default function NavBar(props) {
                 <li id="navli" className={active === 'Prijzen' ? 'active' : ''} onClick={() => handleItemClick('Prijzen')}><a href="/prijzen">Prijzen</a></li>
                 <li id="navli" className={active === 'Boeken' ? 'active' : ''} onClick={() => handleItemClick('Boeken')}><a  href="/boeken">Boeken</a></li>
                 <li id="navli" className={active === 'Merch' ? 'active' : ''} onClick={()=> handleItemClick('Merch')}><a href="/merch">Merch</a></li>
-                <li id="navli" className={active === 'Merch' ? 'active' : ''} onClick={() => handleItemClick('Socials')}><a href="/socials">Socials</a></li>
+                <li id="navli" className={active === 'Socials' ? 'active' : ''} onClick={() => handleItemClick('Socials')}><a href="/socials">Socials</a></li>
             </ul>
         </div>
     )
