@@ -1,15 +1,1 @@
-{
-  "short_name": "SF",
-  "name": "Sonic Fusion",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#060638",
-  "background_color": "#0B0B60",
-  "icons": [
-    {
-      "src": "front-end/public/thumbnail_6DDD42625B4144F58408D4CD84DAB2BE2.png",
-      "type": "image/png",
-      "sizes": "538x454"
-    }
-  ]
-}
+{"name":"Sonic Fusion","short_name":"SF","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#060638","background_color":"#0B0B60","display":"standalone"}
