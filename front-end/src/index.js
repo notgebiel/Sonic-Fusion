@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -9,6 +9,8 @@ import BoekenPage from './routes/boeken';
 import MerchPage from './routes/merch';
 import SocialsPage from './routes/socials';
 import OverOns from './routes/overons';
+
+
 
 const router = createBrowserRouter([
   {

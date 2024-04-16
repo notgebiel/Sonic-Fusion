@@ -1,11 +1,12 @@
 import NavBar from "../components/navbar";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import '../stylesheets/general.css';
 import styles from '../stylesheets/start.module.css';
 import Image from "../fotos_front_page/thumbnail_6DDD42625B4144F58408D4CD84DAB2BE.png"
 import { Link } from 'react-router-dom';
 
 export default function Start() {
+
     return(
         <>
             <NavBar />
