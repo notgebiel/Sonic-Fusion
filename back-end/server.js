@@ -4,9 +4,19 @@ const port = 8080;
 const cors = require('cors');
 
 app.use(cors());
+app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('server linked succesfully');
+    res.json({message: 'server link succesful'});
+})
+
+app.post('/', (req, res) => {
+    console.log(req.body);
+    const data = JSON.stringify(req.body.key);
+
+    console.log('data: ', data);
+
+    res.json({message: 'data received'});
 })
 
 
