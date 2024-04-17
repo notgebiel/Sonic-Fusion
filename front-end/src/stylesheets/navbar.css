@@ -20,7 +20,20 @@
     padding-right: 1rem;
   }
 
+  #navliicon a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding-right: 1rem;
+  }
+
   #navli a:hover {
+    background-color: #1b6c8a;
+  }
+
+  navliicon a:hover {
     background-color: #1b6c8a;
   }
 
