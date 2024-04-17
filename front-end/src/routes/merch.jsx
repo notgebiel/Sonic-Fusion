@@ -8,7 +8,7 @@ const getData = () => {
         console.log(data);
     })
     .catch(error => {
-        console.error('error: ', error);
+        console.log('error: ', error);
     })
 }
 
