@@ -1,8 +1,9 @@
 import NavBar from "../components/navbar"
 import styles from '../stylesheets/merch.module.css';
+const ip = process.env.REACT_APP_SERVERIP;
 
 const getData = () => {
-    fetch('http://localhost:8080/').then(response => response.json())
+    fetch(ip).then(response => response.json())
     .then(data => {
         console.log(data);
     })
@@ -13,7 +14,7 @@ const getData = () => {
 
 const sendData = async (data) => {
     try {
-        const response = await fetch('http://localhost:8080/', {
+        const response = await fetch(ip, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
