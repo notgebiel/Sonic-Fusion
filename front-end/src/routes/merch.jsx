@@ -36,8 +36,6 @@ export default function MerchPage() {
         <>
             <NavBar active="Merch" />
             <h1 className={styles.comingsoon}>Coming Soon</h1>
-            <button onClick={getData}>get</button>
-            <button onClick={() => sendData('piemel')}>send</button>
         </>
     )
 }
