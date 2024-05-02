@@ -54,11 +54,16 @@ const MobileNavbar = ({ active, handleItemClick }) => {
                             <div className="bar3"></div>
                         </div>
                     </li>
-                    <div className='dropdown'>
-                        <li className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Item 1')}>Item 1</li>
-                        <li className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Item 2')}>Item 2</li>
-                        <li className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Item 3')}>Item 3</li>
-                    </div>
+                    
+                </ul>
+            </div>
+            <div className='dropdown'>
+                <ul className='dropdownul'>
+                    <li id="navli" className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Home')}><a href="/">Home</a></li>
+                    <li id="navli" className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Over Ons')}><a href="/over_ons">Over ons</a></li>
+                    <li id="navli" className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Prijzen')}><a href="/prijzen">Prijzen</a></li>
+                    <li id="navli" className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Boeken')}><a href="/boeken">Boeken</a></li>
+                    <li id="navli" className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Merch')}><a href="/merch">Merch</a></li>
                 </ul>
             </div>
         </nav>

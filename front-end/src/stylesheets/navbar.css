@@ -97,9 +97,8 @@
 
   .menu-item {
     display: none;
-    float: right;
+    float: left;
     clear: both;
-    width: 20%;
     background-color: #2596be;
 }
 
@@ -109,27 +108,31 @@
 
 
 .dropdown {
-  max-width: 200px; /* Pas de maximale breedte aan naar jouw behoefte */
   background-color: #2596be;
-  overflow: hidden;
+  margin-top: 2em;
+  overflow: auto;
+  border: none;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  right: 0;
 }
 
-.dropdown ul {
-  list-style-type: none;
+.dropdownul {
   margin: 0;
   padding: 0;
+  float: left;
 }
 
 .dropdown li {
-  float: none; /* Zorg ervoor dat de items niet naast elkaar worden weergegeven */
+  border-bottom: 1px white;
 }
 
 .dropdown li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  float: left;
+  border-bottom: 10px white;
 }
 
 .dropdown li a:hover {
