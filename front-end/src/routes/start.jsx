@@ -1,12 +1,35 @@
 import NavBar from "../components/navbar";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import '../stylesheets/general.css';
 import styles from '../stylesheets/start.module.css';
 import Image from "../fotos_front_page/thumbnail_6DDD42625B4144F58408D4CD84DAB2BE.png"
 import { Link } from 'react-router-dom';
 
-export default function Start() {
 
+const Start = () => {
+
+    //mobiele functionaliteit
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const updateIsMobile = () => {
+            setIsMobile(window.innerWidth <= 600);
+        };
+        updateIsMobile();
+        window.addEventListener('resize', updateIsMobile);
+        return () => {
+            window.removeEventListener('resize', updateIsMobile)
+        }
+    }, []);
+
+    return (
+        <div>
+            {isMobile ? <MobileStart /> : <DesktopStart />}
+        </div>
+    );
+
+}
+
+const DesktopStart = () => {
     return(
         <>
             <NavBar />
@@ -28,5 +51,29 @@ export default function Start() {
                 
             
         </>
-    )
-}
+    )}
+
+    const MobileStart = () => {
+        return(
+            <>
+                <NavBar />
+                <div className={styles.starttopdivmb}>
+                <div className={styles.starttoptekstdivmb}>
+                    <h1>Wie is Sonic Fusion</h1>
+                    <h3><br/>Hallo, wij zijn dj's uit Oudenaarde<br/>
+                        We hebben al op verschillende evenementen gedraaid.<br/>
+                        We zorgen voor een goeie sfeer op het feest dat u nooit zult vergeten.
+                    </h3>
+                    <Link to="/boeken">
+                        <button className={styles.button}><p className={styles.buttonp}>Boek nu</p></button>
+                    </Link>
+                </div>
+                <div className={styles.starttopfotodivmb}>
+                    <img className={styles.foto} src={Image} alt="DJ Sonic Fusion"></img>
+                </div>
+                </div>
+            </>
+        )
+    }
+
+export default Start;
