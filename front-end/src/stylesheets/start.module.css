@@ -71,3 +71,34 @@
     padding: 0;
 }
 
+.starttopdivmb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+}
+
+.starttoptekstdivmb {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+}
+
+.starttopfotodivmb {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+}
+
+.starttopfotodivmb img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}

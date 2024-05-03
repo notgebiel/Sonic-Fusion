@@ -66,12 +66,12 @@
   }
 
   #navliiconmb {
-    float: left;
+    float: right;
   }
 
   .menubtncontainer {
     cursor: pointer;
-    float: right;
+    float: left;
     margin-top: auto;
   }
   
@@ -114,7 +114,7 @@
   border: none;
   border-bottom-left-radius: 20px;
   position: absolute;
-  right: 0;
+  left: 0;
 }
 
 .dropdownul {
