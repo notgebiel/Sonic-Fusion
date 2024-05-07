@@ -1,6 +1,24 @@
-img {
+.imagesoo {
     float: left;
     width: 50%;
     height: auto;
     border-radius: 20px;
+}
+
+.container1, .container2, .container3{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5em;
+    /*border-radius: 20px;*/
+}
+
+.container2 {
+    background-color: #1b6c8a;
+}
+
+.tekstje {
+    flex: 1;
+    float: right;
 }
