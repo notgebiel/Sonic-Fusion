@@ -2,7 +2,9 @@
     float: left;
     width: 50%;
     height: auto;
-    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 0px;
 }
 
 .container1, .container2, .container3{
