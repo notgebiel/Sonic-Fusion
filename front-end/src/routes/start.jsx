@@ -30,14 +30,14 @@ const Start = () => {
 }
 
 const DesktopStart = () => {
-    return(
+    return (
         <>
             <NavBar />
             <div className={styles.starttopdiv}>
                 <div className={styles.starttoptekstdiv}>
                     <h1>Wie is Sonic Fusion</h1>
-                    <h3><br/>Hallo, wij zijn dj's uit Oudenaarde<br/>
-                        We hebben al op verschillende evenementen gedraaid.<br/>
+                    <h3><br />Hallo, wij zijn dj's uit Oudenaarde<br />
+                        We hebben al op verschillende evenementen gedraaid.<br />
                         We zorgen voor een goeie sfeer op het feest dat u nooit zult vergeten.
                     </h3>
                     <Link to="/boeken">
@@ -47,25 +47,26 @@ const DesktopStart = () => {
                 <div className={styles.starttopfotodiv}>
                     <img className={styles.foto} src={Image} alt="DJ Sonic Fusion"></img>
                 </div>
-                </div>
-                <div className={styles.prijzendiv}>
-                    <span style={{textAlign: "center", marginTop: '0'}}><h2>Prijzen</h2></span>
-                    <h3 className={styles.prijzentekst}>prijzentekst</h3>
-                </div>
-                
-            
-        </>
-    )}
+            </div>
+            <div className={styles.prijzendiv}>
+                <span style={{ textAlign: "center", marginTop: '0' }}><h2>Prijzen</h2></span>
+                <h3 className={styles.prijzentekst}>prijzentekst</h3>
+            </div>
 
-    const MobileStart = () => {
-        return(
-            <>
-                <NavBar />
-                <div className={styles.starttopdivmb}>
+
+        </>
+    )
+}
+
+const MobileStart = () => {
+    return (
+        <>
+            <NavBar />
+            <div className={styles.starttopdivmb}>
                 <div className={styles.starttoptekstdivmb}>
                     <h1>Wie is Sonic Fusion</h1>
-                    <h3><br/>Hallo, wij zijn dj's uit Oudenaarde<br/>
-                        We hebben al op verschillende evenementen gedraaid.<br/>
+                    <h3><br />Hallo, wij zijn dj's uit Oudenaarde<br />
+                        We hebben al op verschillende evenementen gedraaid.<br />
                         We zorgen voor een goeie sfeer op het feest dat u nooit zult vergeten.
                     </h3>
                     <Link to="/boeken">
@@ -75,9 +76,9 @@ const DesktopStart = () => {
                 <div className={styles.starttopfotodivmb}>
                     <img className={styles.foto} src={Image} alt="DJ Sonic Fusion"></img>
                 </div>
-                </div>
-            </>
-        )
-    }
+            </div>
+        </>
+    )
+}
 
 export default Start;
