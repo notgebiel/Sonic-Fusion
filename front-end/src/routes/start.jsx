@@ -48,6 +48,9 @@ const DesktopStart = () => {
                     <img className={styles.foto} src={Image} alt="DJ Sonic Fusion"></img>
                 </div>
                 </div>
+                <div className={styles.prijzendiv}>
+                    <span style={{textAlign: "center", marginTop: '0'}}><h2>Prijzen</h2></span>
+                </div>
                 
             
         </>
