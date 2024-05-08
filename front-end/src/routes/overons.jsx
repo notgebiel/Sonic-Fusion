@@ -38,11 +38,11 @@ const DesktopOverOns = () => {
         <div>
             <NavBar active="Over ons" />
             <div className='container1'>
-                <img className='imagesoo' src={image1} alt="dj sonic fusion"></img>
+                <img className='imagesoo' src={image2} alt="dj sonic fusion"></img>
                 <h3 className='tekstje'>tekstje</h3>
             </div>
             <div className='container2'>
-                <img className='imagesoo' src={image2} alt="dj sonic fusion"></img>
+                <img className='imagesoo' src={image1} alt="dj sonic fusion"></img>
                 <h3 className='tekstje'>foto van milo met beschrijving</h3>
             </div>
             <div className='container3'>
