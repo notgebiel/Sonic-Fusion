@@ -4,9 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Start from './routes/start';
-import BoekenPage from './routes/boeken';
 import MerchPage from './routes/merch';
-import SocialsPage from './routes/socials';
 import OverOns from './routes/overons';
 
 
@@ -17,16 +15,8 @@ const router = createBrowserRouter([
     element: <Start />
   },
   {
-    path: '/boeken',
-    element: <BoekenPage />
-  },
-  {
     path: '/merch',
     element: <MerchPage />
-  },
-  {
-    path: '/socials',
-    element: <SocialsPage />
   },
   {
     path: '/over_ons',
