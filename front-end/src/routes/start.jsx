@@ -30,7 +30,7 @@ const Start = () => {
 }
 
 const DesktopStart = () => {
-    
+
     const boekenRef = useRef(null);
 
     const scrollToDiv = () => {
@@ -49,7 +49,7 @@ const DesktopStart = () => {
                         We hebben al op verschillende evenementen gedraaid.<br />
                         We zorgen voor een goeie sfeer op het feest dat u nooit zult vergeten.
                     </h3>
-                        <button className={styles.button} onClick={scrollToDiv}><p className={styles.buttonp}>Boek nu</p></button>
+                    <button className={styles.button} onClick={scrollToDiv}><p className={styles.buttonp}>Boek nu</p></button>
                 </div>
                 <div className={styles.starttopfotodiv}>
                     <img className={styles.foto} src={Image} alt="DJ Sonic Fusion"></img>
@@ -60,10 +60,10 @@ const DesktopStart = () => {
                 <h3 className={styles.prijzentekst}>prijzentekst</h3>
             </div>
             <div className={styles.boekendiv} ref={boekenRef}>
-                <span style={{textAlign: "center", marginTop: '0', marginBottom: '0'}}><h2>Boeken</h2></span>
+                <span style={{ textAlign: "center", marginTop: '0', marginBottom: '0' }}><h2>Boeken</h2></span>
                 <h3 className={styles.boekentekst}>
-                    Geïnteresseerd?<br/>
-                    Boeken kan via onze <a href="https://www.instagram.com/dj_sonic_fusion/" target="_blank">Instagram pagina.</a><br/>
+                    Geïnteresseerd?<br />
+                    Boeken kan via onze <a href="https://www.instagram.com/dj_sonic_fusion/" target="_blank">Instagram pagina.</a><br />
                     Stuur ons een DM en wij antwoorden hier zo snel mogelijk op. Tot dan!
                 </h3>
             </div>
@@ -93,7 +93,7 @@ const MobileStart = () => {
                         We hebben al op verschillende evenementen gedraaid.<br />
                         We zorgen voor een goeie sfeer op het feest dat u nooit zult vergeten.
                     </h3>
-                        <button className={styles.button} onClick={scrollToDiv}><p className={styles.buttonp}>Boek nu</p></button>
+                    <button className={styles.button} onClick={scrollToDiv}><p className={styles.buttonp}>Boek nu</p></button>
                 </div>
                 <div className={styles.starttopfotodivmb}>
                     <img className={styles.foto} src={Image} alt="DJ Sonic Fusion"></img>
@@ -104,10 +104,10 @@ const MobileStart = () => {
                 <h3 className={styles.prijzentekst}>prijzentekst</h3>
             </div>
             <div className={styles.boekendiv} ref={boekenRef}>
-                <span style={{textAlign: "center", marginTop: '0', marginBottom: '0'}}><h2>Boeken</h2></span>
+                <span style={{ textAlign: "center", marginTop: '0', marginBottom: '0' }}><h2>Boeken</h2></span>
                 <h3 className={styles.boekentekst}>
-                    Geïnteresseerd?<br/>
-                    Boeken kan via onze <a href="https://www.instagram.com/dj_sonic_fusion/" target="_blank">Instagram pagina.</a><br/>
+                    Geïnteresseerd?<br />
+                    Boeken kan via onze <a href="https://www.instagram.com/dj_sonic_fusion/" target="_blank">Instagram pagina.</a><br />
                     Stuur ons een DM en wij antwoorden hier zo snel mogelijk op. Tot dan!
                 </h3>
             </div>
