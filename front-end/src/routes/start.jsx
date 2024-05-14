@@ -52,6 +52,10 @@ const DesktopStart = () => {
                 <span style={{ textAlign: "center", marginTop: '0' }}><h2>Prijzen</h2></span>
                 <h3 className={styles.prijzentekst}>prijzentekst</h3>
             </div>
+            <div className={styles.boekendiv}>
+                <span style={{textAlign: "center", marginTop: '0'}}><h2>Boeken</h2></span>
+                <h3 className={styles.boekentekst}>Boekentekst</h3>
+            </div>
 
 
         </>
