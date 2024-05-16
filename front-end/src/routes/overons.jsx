@@ -35,6 +35,8 @@ export default function OverOns() {
 }
 
 const DesktopOverOns = () => {
+    alert('Dit is een voorlopige versie en geen representatie van het eindproduct.');
+
     return (
         <>
         <div>
