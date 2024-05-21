@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from "../components/navbar";
+import Footer from '../components/footer';
 //import Carousel from "../components/imageslider";
 import '../stylesheets/overons.css';
 //import foto's
@@ -26,13 +27,16 @@ export default function OverOns() {
     }, []);
 
     return(
-        <div>
+        <div id="root">
             {isMobile ? <MobileOVerOns /> : <DesktopOverOns />}
+            <Footer />
         </div>
     )
 }
 
 const DesktopOverOns = () => {
+    alert('Dit is een voorlopige versie en geen representatie van het eindproduct.');
+
     return (
         <>
         <div>
@@ -60,8 +64,11 @@ const MobileOVerOns = () => {
         <div>
             <NavBar active="Over ons" />
             <div className="container1mb">
+                <img src={image2} alt="DJ Sonic Fusion" className='imagesoomb'/>
+                <div className='overlaydiv'>
+                    <p className='overlayp'>overlay tekst</p>
+                </div>
             </div>
-            <h1>mobile over ons</h1>
         </div>
         </>
     )

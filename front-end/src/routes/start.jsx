@@ -4,6 +4,7 @@ import '../stylesheets/general.css';
 import styles from '../stylesheets/start.module.css';
 import Image from "../fotos_front_page/thumbnail_6DDD42625B4144F58408D4CD84DAB2BE.png"
 import { Link } from 'react-router-dom';
+import Footer from "../components/footer";
 
 
 const Start = () => {
@@ -22,15 +23,16 @@ const Start = () => {
     }, []);
 
     return (
-        <div>
+        <div id="root">
             {isMobile ? <MobileStart /> : <DesktopStart />}
+            <Footer />
         </div>
     );
 
 }
 
 const DesktopStart = () => {
-
+    alert('Dit is een voorlopige versie en geen representatie van het eindproduct.');
     const boekenRef = useRef(null);
 
     const scrollToDiv = () => {
@@ -60,14 +62,12 @@ const DesktopStart = () => {
                 <h3 className={styles.prijzentekst}>prijzentekst</h3>
             </div>
             <div className={styles.boekendiv} ref={boekenRef}>
-                <span style={{ textAlign: "center", marginTop: '0', marginBottom: '0' }}><h2>Boeken</h2></span>
-                <h3 className={styles.boekentekst}>
+                    <h3 className={styles.boekentekst}>
                     Geïnteresseerd?<br />
                     Boeken kan via onze <a href="https://www.instagram.com/dj_sonic_fusion/" target="_blank">Instagram pagina.</a><br />
                     Stuur ons een DM en wij antwoorden hier zo snel mogelijk op. Tot dan!
                 </h3>
             </div>
-
 
         </>
     )
@@ -104,16 +104,16 @@ const MobileStart = () => {
                 <h3 className={styles.prijzentekst}>prijzentekst</h3>
             </div>
             <div className={styles.boekendiv} ref={boekenRef}>
-                <span style={{ textAlign: "center", marginTop: '0', marginBottom: '0' }}><h2>Boeken</h2></span>
                 <h3 className={styles.boekentekst}>
                     Geïnteresseerd?<br />
                     Boeken kan via onze <a href="https://www.instagram.com/dj_sonic_fusion/" target="_blank">Instagram pagina.</a><br />
                     Stuur ons een DM en wij antwoorden hier zo snel mogelijk op. Tot dan!
                 </h3>
             </div>
-
         </>
     )
 }
 
 export default Start;
+
+//            <span style={{ textAlign: "center", marginTop: '0', marginBottom: '0' }}><h2>Boeken</h2></span>

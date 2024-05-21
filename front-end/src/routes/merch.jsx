@@ -12,9 +12,13 @@ const getData = () => {
     })
 }
 
-const sendData = async (data) => {
+const sendData = async () => {
     try {
-        const response = await fetch(ip, {
+        const data = {
+            'key': 'value',
+            'data': 'pik'
+        }
+        const response = await fetch('http://localhost:10000/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,6 +40,7 @@ export default function MerchPage() {
         <>
             <NavBar active="Merch" />
             <h1 className={styles.comingsoon}>Coming Soon</h1>
+            <button onClick={sendData}>send</button>
         </>
     )
 }

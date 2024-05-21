@@ -61,7 +61,6 @@ const MobileNavbar = ({ active, handleItemClick }) => {
                 <ul className='dropdownul'>
                     <li id="navli" className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Home')}><a href="/">Home</a></li>
                     <li id="navli" className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Over Ons')}><a href="/over_ons">Over ons</a></li>
-                    <li id="navli" className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Boeken')}><a href="/boeken">Boeken</a></li>
                     <li id="navli" className={`menu-item ${isOpen ? 'show' : ''}`} onClick={() => handleItemClick('Merch')}><a href="/merch">Merch</a></li>
                 </ul>
             </div>
@@ -77,7 +76,6 @@ const DesktopNavbar = ({ active, handleItemClick }) => {
                 <ul className="navbarul">
                     <li id="navli" className={active === 'Home' ? 'active' : ''} onClick={() => handleItemClick('Home')}><a href="/">Home</a></li>
                     <li id="navli" className={active === 'Over ons' ? 'active' : ''} onClick={() => handleItemClick('Over Ons')}><a href="/over_ons">Over ons</a></li>
-                    <li id="navli" className={active === 'Boeken' ? 'active' : ''} onClick={() => handleItemClick('Boeken')}><a href="/boeken">Boeken</a></li>
                     <li id="navli" className={active === 'Merch' ? 'active' : ''} onClick={() => handleItemClick('Merch')}><a href="/merch">Merch</a></li>
                     <li id="navliicon" className='smicons'><a href="https://www.instagram.com/dj_sonic_fusion/" target="_blank"><IoLogoInstagram /></a></li>
                     <li id='navliicon' className='smicons'><a href="https://www.tiktok.com/@dj_sonic_fusi0n?is_from_webapp=1&sender_device=pc" target='_blank'><SiTiktok /></a></li>

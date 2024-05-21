@@ -2,14 +2,24 @@ body {
     background-color: #05052c;
     margin: 0px;
     padding: 0px;
+    height: 100%;
 }
 
 html {
     margin: 0px;
     padding: 0px;
+    height: 100%;
 }
 
 p, h1, h2, h3, h4 {
     color: white;
     padding-top: 20px;
+}
+
+#root {
+    height: 100%;
+}
+
+.footerdiv {
+    bottom: 0;
 }
