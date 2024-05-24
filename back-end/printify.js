@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3001;
 const printify_api_key = process.env.PRINTIFYAPIKEY;
 const printify_base_url = 'https://api.printify.com/v1';
 app.use(bodyParser.json());
+const titles = [];
 
 const apiClient = axios.create({
     baseURL: printify_base_url,
@@ -43,8 +44,10 @@ const oversizedTeeId = "664f03589401c5a60c0dca8a"
 app.get('/oversizedTee', async (req, res) => {
     try {
         const response = await apiClient.get(`/shops/${shopId}/products/${oversizedTeeId}.json`);
-        const title = response.data.title;
-        console.log(title);
+        if(!titles.includes(response.data.title)){
+        titles.push(response.data.title);
+        }
+        console.log(titles);
         res.json(response.data);
     }catch(error) {
         if (!res.headersSent) {
