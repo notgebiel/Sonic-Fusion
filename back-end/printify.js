@@ -28,7 +28,7 @@ app.get('/shops', async (req, res) => {
 })
 
 //get products
-const shopId = 16040083;
+const shopId = 14971537;
 app.get('/products', async (req, res) => {
     try {
     const response = await apiClient.get(`/shops/${shopId}/products.json`);
@@ -40,22 +40,7 @@ app.get('/products', async (req, res) => {
 });
 
 //get oversized Tee essential data
-const oversizedTeeId = "664f03589401c5a60c0dca8a"
-app.get('/oversizedTee', async (req, res) => {
-    try {
-        const response = await apiClient.get(`/shops/${shopId}/products/${oversizedTeeId}.json`);
-        if(!titles.includes(response.data.title)){
-        titles.push(response.data.title);
-        }
-        console.log(titles);
-        res.json(response.data);
-    }catch(error) {
-        if (!res.headersSent) {
-            const status = error.response && error.response.status ? error.response.status : 500;
-            res.status(status).json({ error: error.message });
-        }
-    }
-})
+
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
