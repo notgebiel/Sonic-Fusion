@@ -1,0 +1,29 @@
+/* src/App.css */
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .productCart {
+    border: 1px solid #1b6c8a;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 8px 16px #1b6c8a;
+  }
+  
+  .productCart img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .productCart h2 {
+    font-size: 1.2em;
+  }
+  
+  .productCart p {
+    font-size: 1em;
+  }
+  
+  

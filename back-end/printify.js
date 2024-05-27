@@ -6,8 +6,9 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 const printify_api_key = process.env.PRINTIFYAPIKEY;
 const printify_base_url = 'https://api.printify.com/v1';
+const cors = require('cors')
+app.use(cors());
 app.use(bodyParser.json());
-const titles = [];
 
 const apiClient = axios.create({
     baseURL: printify_base_url,
@@ -32,14 +33,14 @@ const shopId = 14971537;
 app.get('/products', async (req, res) => {
     try {
     const response = await apiClient.get(`/shops/${shopId}/products.json`);
-    res.json(response.data);
+    res.json(response.data.data);
+   
     }
     catch(error) {
        res.status(error.response.status).json({error: error.message});
     }
 });
 
-//get oversized Tee essential data
 
 
 app.listen(PORT, () => {
