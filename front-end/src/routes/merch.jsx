@@ -44,7 +44,7 @@ export default function MerchPage() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/products')
+        axios.get(`${ip}/products`)
         .then(response => {
             const transformedProducts = response.data.map(product => ({
                 id: product.id,

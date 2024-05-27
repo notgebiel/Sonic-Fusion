@@ -3,6 +3,7 @@
     "axios": "^1.7.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "env-cmd": "^10.1.0",
@@ -18,7 +19,7 @@
     "validator": "^13.11.0"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "env-cmd -f ./config/config.env nodemon ./server.js",
     "dev": "env-cmd -f ./config/config.env nodemon ./server.js",
     "ptf": "env-cmd -f .env nodemon printify.js"
   }
