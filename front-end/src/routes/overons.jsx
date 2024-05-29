@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 //import Carousel from "../components/imageslider";
 import '../stylesheets/overons.css';
 //import foto's
-import image1 from '../fotos_front_page/Afbeelding.jpg';
+import image1 from '../fotos_front_page/1oo.jpg';
 import image2 from '../fotos_front_page/Afbeelding(1).jpg';
 import image3 from '../fotos_front_page/Afbeelding(2).jpg';
 import image4 from '../fotos_front_page/Afbeelding(3).jpg';
@@ -42,11 +42,11 @@ const DesktopOverOns = () => {
         <div>
             <NavBar active="Over ons" />
             <div className='container1'>
-                <img className='imagesoo' src={image2} alt="dj sonic fusion"></img>
+                <img className='imagesoo' src={image1} alt="dj sonic fusion"></img>
                 <h3 className='tekstje'>tekstje</h3>
             </div>
             <div className='container2'>
-                <img className='imagesoo' src={image1} alt="dj sonic fusion"></img>
+                <img className='imagesoo' src={image2} alt="dj sonic fusion"></img>
                 <h3 className='tekstje'>foto van milo met beschrijving</h3>
             </div>
             <div className='container3'>
