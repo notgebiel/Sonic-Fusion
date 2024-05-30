@@ -46,11 +46,22 @@ export default function MerchPage() {
     useEffect(() => {
         axios.get(`http://localhost:10000/products`)
         .then(response => {
+            const extractedValues = (array) => {
+                const result = {sizes: [], colors: []};
+                array.forEach(item => {
+                    if (item.type === "sizes") {
+                        result.sizes = result.sizes.concat(item.values);
+                    }else if (item.type === "colors") {
+                        result.colors = result.colors.concat(item.values);
+                    }
+                })
+            }
             const transformedProducts = response.data.map(product => ({
                 id: product.id,
                 title: product.title,
                 description: product.description,
                 image: product.images.map(image => ({ src: image.src })),
+                
             }));
             setProducts(transformedProducts);
         })
