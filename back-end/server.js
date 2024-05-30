@@ -64,7 +64,8 @@ app.get('/products', async (req, res) => {
     try {
     const response = await apiClient.get(`/shops/${shopId}/products.json`);
     res.json(response.data.data);
-   
+    //sizes
+   console.log(response.data.data);
     }
     catch(error) {
        res.status(error.response.status).json({error: error.message});
