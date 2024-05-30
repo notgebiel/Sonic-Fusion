@@ -2,7 +2,6 @@ import React from 'react';
 
 
 const Product = ({ product }) => {
-    console.log(product.image);
 
     return (
         <div className='productCart'>

@@ -46,27 +46,32 @@ export default function MerchPage() {
     useEffect(() => {
         axios.get(`http://localhost:10000/products`)
         .then(response => {
-            const extractedValues = (array) => {
-                const result = {sizes: [], colors: []};
-                array.forEach(item => {
-                    if (item.type === "sizes") {
-                        result.sizes = result.sizes.concat(item.values);
-                    }else if (item.type === "colors") {
-                        result.colors = result.colors.concat(item.values);
-                    }
-                })
-            }
-            const transformedProducts = response.data.map(product => ({
-                id: product.id,
-                title: product.title,
-                description: product.description,
-                image: product.images.map(image => ({ src: image.src })),
-                
-            }));
-            setProducts(transformedProducts);
+            const transformedProducts = response.data.map(product => {
+                const colors = product.options.find(option => option.name === "Colors");
+                const sizes = product.options.find(option => option.name === "Sizes");
+                const prices = product.variants.map(variant => variant.price);
+                console.log(prices);
+    
+                const transformedColors = colors ? colors.values.map(value => value.title) : [];
+                const transformedSizes = sizes ? sizes.values.map(value => value.title) : [];
+                console.log(transformedColors);
+                console.log(transformedSizes)
+    
+                return {
+                    id: product.id,
+                    title: product.title,
+                    description: product.description,
+                    image: product.images.map(image => ({ src: image.src })),
+                    colors: transformedColors,
+                    sizes: transformedSizes,
+                    price: prices,
+                };
+            });
+            setProducts(transformedProducts); // Zet de getransformeerde producten in de state
         })
         .catch(error => console.error('error fetching products', error));
     }, []);
+    
 
     return (
         <>
