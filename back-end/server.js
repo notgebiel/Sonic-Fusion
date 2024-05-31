@@ -62,13 +62,30 @@ app.get('/shops', async (req, res) => {
 const shopId = 14971537;
 app.get('/products', async (req, res) => {
     try {
-    const response = await apiClient.get(`/shops/${shopId}/products.json`);
-    res.json(response.data.data);
-    //sizes
-   console.log(response.data.data[0].options);
+        
+    const response = await axios.get(`https://api.printify.com/v1/shops/${shopId}/products.json`, {
+        headers: {
+            'Authorization': `Bearer ${printify_api_key}`
+        }
+    });
+    const products = response.data.map(product => ({
+        id: product.id,
+        title: product.title,
+        description: product.description,
+        images: product.images.map(image => image.src),
+        variants: product.variants.map(variant => ({
+            id: variant.id,
+            title: variant.title,
+            sku: variant.sku,
+            price: variant.price,
+            color: variant.options.color,
+            size: variant.options.size
+        }))
+    }));
+        res.json(products);
     }
     catch(error) {
-       res.status(error.response.status).json({error: error.message});
+       res.status(500).send(error.message);
     }
 });
 
