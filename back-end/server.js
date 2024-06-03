@@ -68,21 +68,35 @@ app.get('/products', async (req, res) => {
             'Authorization': `Bearer ${printify_api_key}`
         }
     });
-    const products = response.data.data.map(product => ({
-        id: product.id,
-        title: product.title,
-        description: product.description,
-        images: product.images.map(image => image.src),
-        variants: product.variants.map(variant => ({
-            id: variant.id,
-            title: variant.title,
-            sku: variant.sku,
-            price: variant.price,
-            color: variant.options.color,
-            size: variant.options.size
-        }))
-    }));
-        res.json(products);
+    
+    const products = response.data.data.map(product => {
+        // Create a map of image URLs keyed by variant ID
+        const variantImageMap = product.images.reduce((map, image) => {
+            image.variant_ids.forEach(variantId => {
+                map[variantId] = image.src;
+            });
+            return map;
+        }, {});
+    
+        return {
+            id: product.id,
+            title: product.title,
+            description: product.description,
+            images: product.images.map(image => image.src),
+            variants: product.variants.map(variant => ({
+                id: variant.id,
+                title: variant.title,
+                sku: variant.sku,
+                price: variant.price,
+                color: variant.options.color,
+                size: variant.options.size,
+                image: variantImageMap[variant.id] || product.images[0].src // Use product's first image as fallback
+            }))
+        };
+    });
+    
+    res.json(products);
+    
     }
     catch(error) {
        res.status(500).send(error.message);
