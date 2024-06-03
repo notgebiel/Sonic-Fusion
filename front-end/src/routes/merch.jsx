@@ -4,6 +4,7 @@ import ProductList from "../components/productList";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../stylesheets/product.css'
+import Products from "../components/product";
 const ip = process.env.REACT_APP_SERVERIP;
 
 
@@ -43,12 +44,7 @@ const sendData = async () => {
 export default function MerchPage() {
     const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        axios.get(`http://localhost:10000/products`)
-        .then(response => {
-           
-        })
-    }, []);
+
     
 
     return (
@@ -56,7 +52,7 @@ export default function MerchPage() {
             <NavBar active="Merch" />
             <h1 className={styles.comingsoon}>Coming Soon</h1>
             <button onClick={sendData}>send</button>
-            <ProductList products={products} />
+            <Products />
         </>
     )
 }

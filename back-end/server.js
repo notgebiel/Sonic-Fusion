@@ -68,7 +68,7 @@ app.get('/products', async (req, res) => {
             'Authorization': `Bearer ${printify_api_key}`
         }
     });
-    const products = response.data.map(product => ({
+    const products = response.data.data.map(product => ({
         id: product.id,
         title: product.title,
         description: product.description,
