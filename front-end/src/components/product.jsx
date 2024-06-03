@@ -46,7 +46,7 @@ function Products() {
                 {products.map(product => (
                     <div key={product.id} className="product">
                         <h2>{product.title}</h2>
-                        <p>{product.description}</p>
+                        <p>product.description</p>
                         <img src={product.images[0]} alt={product.title} />
                         <select  value={selectedVariants[product.id] || ''}
                         onChange={(e) => handleVariantChange(product.id, e.target.value)}>
