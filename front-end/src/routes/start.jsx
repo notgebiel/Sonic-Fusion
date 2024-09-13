@@ -31,7 +31,6 @@ const Start = () => {
 }
 
 const DesktopStart = () => {
-    alert('Dit is een voorlopige versie en geen representatie van het eindproduct.');
     const boekenRef = useRef(null);
 
     const scrollToDiv = () => {

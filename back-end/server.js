@@ -60,6 +60,20 @@ app.get('/shops', async (req, res) => {
 
 //get products
 const shopId = 14971537;
+//all products
+app.get('/allproducts', async (req, res) => {
+    try {
+        const response = await axios.get(`${printify_base_url}/shops/${shopId}/products.json`, {
+            headers: {
+                'Authorization': `Bearer ${printify_api_key}`
+            }
+        });
+        res.send(response.data.data);
+    }catch(error) {
+        res.status(500).send(error.message);
+    }
+})
+//product data for front-end
 app.get('/products', async (req, res) => {
     try {
         
@@ -90,7 +104,7 @@ app.get('/products', async (req, res) => {
                 price: variant.price,
                 color: variant.options.color,
                 size: variant.options.size,
-                image: variantImageMap[variant.id] || product.images[0].src // Use product's first image as fallback
+                image: variantImageMap[variant.id] //|| product.images[0].src 
             }))
         };
     });

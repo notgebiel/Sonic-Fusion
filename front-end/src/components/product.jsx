@@ -57,7 +57,7 @@ function Products() {
                         <h2 className='productTitle'>{product.title}</h2>
                         <p className='productDescription'>product.description</p>
                         <img src={selectedImages[product.id] || product.images[0]} alt={product.title} />
-                        <select 
+                        {/*<select 
                             value={selectedVariants[product.id] || ''} 
                             onChange={(e) => handleVariantChange(product.id, e.target.value)}
                         >
@@ -66,7 +66,7 @@ function Products() {
                                     {variant.title} - {variant.color} - {variant.size} - ${variant.price / 100}
                                 </option>
                             ))}
-                        </select>
+                        </select>*/}
                     </div>
                 ))}
             </div>
