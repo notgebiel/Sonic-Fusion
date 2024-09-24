@@ -11,5 +11,5 @@ const Footer = () => {
         </>
     )
 }
-//comment for init commit
+//comment for init commit 2
 export default Footer;
