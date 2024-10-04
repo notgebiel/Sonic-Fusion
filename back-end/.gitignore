@@ -27,3 +27,4 @@ yarn-error.log*
 .env
 .env.*
 config.env
+back-end/config/config.env

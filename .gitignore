@@ -1,2 +1,2 @@
-/front-end/src/config
+./front-end/src/config
 /back-end/config/config.env
