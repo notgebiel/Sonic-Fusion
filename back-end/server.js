@@ -9,9 +9,9 @@ const printify_api_key = process.env.PRINTIFYAPIKEY;
 const printify_base_url = 'https://api.printify.com/v1';
 let mainToSfMain = null;
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); 
 app.use(bodyParser.json());
-
+ 
 app.get('/', (req, res) => {
     res.json({ message: 'server link succesful' });
 })
