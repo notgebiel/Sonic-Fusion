@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.json({message: 'server link succesful'});
+    res.json({ message: 'server link succesful' });
 })
 
 app.post('/', (req, res) => {
@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
 
     console.log('data: ', data);
 
-    res.json({message: 'data received'});
+    res.json({ message: 'data received' });
     mainToSfMain = data;
 })
 
@@ -34,7 +34,7 @@ app.get('/sf/main', async (req, res) => {
             data: mainToSfMain
         });
         res.send(`data sent to parent server ${response.data}`)
-    }catch (error) {
+    } catch (error) {
         res.status(500).send(`Error sending data to parent server: ${error.message}`);
     }
 })
@@ -53,8 +53,8 @@ app.get('/shops', async (req, res) => {
     try {
         const response = await apiClient.get('/shops.json');
         res.json(response.data);
-    }catch (error) {
-        res.status(error.response.status).json({error: error.message});
+    } catch (error) {
+        res.status(error.response.status).json({ error: error.message });
     }
 })
 
@@ -69,51 +69,51 @@ app.get('/allproducts', async (req, res) => {
             }
         });
         res.send(response.data.data);
-    }catch(error) {
+    } catch (error) {
         res.status(500).send(error.message);
     }
 })
 //product data for front-end
 app.get('/products', async (req, res) => {
     try {
-        
-    const response = await axios.get(`https://api.printify.com/v1/shops/${shopId}/products.json`, {
-        headers: {
-            'Authorization': `Bearer ${printify_api_key}`
-        }
-    });
-    
-    const products = response.data.data.map(product => {
-        // Create a map of image URLs keyed by variant ID
-        const variantImageMap = product.images.reduce((map, image) => {
-            image.variant_ids.forEach(variantId => {
-                map[variantId] = image.src;
-            });
-            return map;
-        }, {});
-    
-        return {
-            id: product.id,
-            title: product.title,
-            description: product.description,
-            images: product.images.map(image => image.src),
-            variants: product.variants.map(variant => ({
-                id: variant.id,
-                title: variant.title,
-                sku: variant.sku,
-                price: variant.price,
-                color: variant.options.color,
-                size: variant.options.size,
-                image: variantImageMap[variant.id] //|| product.images[0].src 
-            }))
-        };
-    });
-    
-    res.json(products);
-    
+
+        const response = await axios.get(`https://api.printify.com/v1/shops/${shopId}/products.json`, {
+            headers: {
+                'Authorization': `Bearer ${printify_api_key}`
+            }
+        });
+
+        const products = response.data.data.map(product => {
+            // Create a map of image URLs keyed by variant ID
+            const variantImageMap = product.images.reduce((map, image) => {
+                image.variant_ids.forEach(variantId => {
+                    map[variantId] = image.src;
+                });
+                return map;
+            }, {});
+
+            return {
+                id: product.id,
+                title: product.title,
+                description: product.description,
+                images: product.images.map(image => image.src),
+                variants: product.variants.map(variant => ({
+                    id: variant.id,
+                    title: variant.title,
+                    sku: variant.sku,
+                    price: variant.price,
+                    color: variant.options.color,
+                    size: variant.options.size,
+                    image: variantImageMap[variant.id] //|| product.images[0].src 
+                }))
+            };
+        });
+
+        res.json(products);
+
     }
-    catch(error) {
-       res.status(500).send(error.message);
+    catch (error) {
+        res.status(500).send(error.message);
     }
 });
 
