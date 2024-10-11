@@ -19,7 +19,7 @@
     "validator": "^13.11.0"
   },
   "scripts": {
-    "start": "env-cmd -f ./config/config.env nodemon ./server.js",
+    "start": "env-cmd -f .env nodemon ./server.js",
     "dev": "env-cmd -f ./config/config.env nodemon ./server.js",
     "ptf": "env-cmd -f .env nodemon printify.js"
   }
