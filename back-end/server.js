@@ -3,7 +3,9 @@ const app = express();
 const port = process.env.PORT || 10000;
 const cors = require('cors');
 const axios = require('axios');
-require('dotenv');
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+  }
 const bodyParser = require('body-parser');
 const printify_api_key = process.env.PRINTIFYAPIKEY;
 const printify_base_url = 'https://api.printify.com/v1';
