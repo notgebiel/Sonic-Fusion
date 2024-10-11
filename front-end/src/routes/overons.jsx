@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import NavBar from "../components/navbar";
 import Footer from '../components/footer';
 //import Carousel from "../components/imageslider";
@@ -11,65 +11,32 @@ import image4 from '../fotos_front_page/Afbeelding(3).jpg';
 import image5 from '../fotos_front_page/Afbeelding(4).jpg';
 import image6 from '../fotos_front_page/Afbeelding(5).jpg';
 
-
 export default function OverOns() {
-
-    const [isMobile, setIsMobile] = useState(false);
-    useEffect(() => {
-        const updateIsMobile = () => {
-            setIsMobile(window.innerWidth <= 600);
-        };
-        updateIsMobile();
-        window.addEventListener('resize', updateIsMobile);
-        return () => {
-            window.removeEventListener('resize', updateIsMobile);
-        }
-    }, []);
-
-    return(
-        <div id="root">
-            {isMobile ? <MobileOVerOns /> : <DesktopOverOns />}
-            <Footer />
-        </div>
-    )
-}
-
-const DesktopOverOns = () => {
-    alert('Dit is een voorlopige versie en geen representatie van het eindproduct.');
-
     return (
-        <>
-        <div>
-            <NavBar active="Over ons" />
-            <div className='container1'>
-                <img className='imagesoo' src={image2} alt="dj sonic fusion"></img>
-                <h3 className='tekstje'>tekstje</h3>
-            </div>
-            <div className='container2'>
-                <img className='imagesoo' src={image1} alt="dj sonic fusion"></img>
-                <h3 className='tekstje'>foto van milo met beschrijving</h3>
-            </div>
-            <div className='container3'>
-                <img className='imagesoo' src={image3} alt="dj sonic fusion"></img>
-                <h3 className='tekstje'>foto van baptiste met beschrijving</h3>
-            </div>
-        </div>
-        </>
-    )
-};
-
-const MobileOVerOns = () => {
-    return (
-        <>
-        <div>
-            <NavBar active="Over ons" />
-            <div className="container1mb">
-                <img src={image2} alt="DJ Sonic Fusion" className='imagesoomb'/>
-                <div className='overlaydiv'>
-                    <p className='overlayp'>overlay tekst</p>
+        <div className="overons">
+            <NavBar />
+            <div className="container1">
+                <img src={image1} alt="Image 1" className="imagesoo" />
+                <div className="content">
+                    <h2>Title 1</h2>
+                    <p>Description for image 1.</p>
                 </div>
             </div>
+            <div className="container2">
+                <img src={image2} alt="Image 2" className="imagesoo" />
+                <div className="content">
+                    <h2>Title 2</h2>
+                    <p>Description for image 2.</p>
+                </div>
+            </div>
+            <div className="container3">
+                <img src={image3} alt="Image 3" className="imagesoo" />
+                <div className="content">
+                    <h2>Title 3</h2>
+                    <p>Description for image 3.</p>
+                </div>
+            </div>
+            
         </div>
-        </>
-    )
+    );
 }

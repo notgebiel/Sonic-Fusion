@@ -25,7 +25,6 @@ const Start = () => {
     return (
         <div id="root">
             {isMobile ? <MobileStart /> : <DesktopStart />}
-            <Footer />
         </div>
     );
 

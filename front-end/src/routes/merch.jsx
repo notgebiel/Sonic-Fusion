@@ -2,7 +2,7 @@ import NavBar from "../components/navbar"
 import styles from '../stylesheets/merch.module.css';
 const ip = process.env.REACT_APP_SERVERIP;
 
-const getData = () => {
+/*const getData = () => {
     fetch(ip).then(response => response.json())
     .then(data => {
         console.log(data);
@@ -33,14 +33,13 @@ const sendData = async () => {
     }catch (error) {
         console.error('error sending data: ', error);
     }
-}
+}*/
 
 export default function MerchPage() {
     return (
         <>
             <NavBar active="Merch" />
             <h1 className={styles.comingsoon}>Coming Soon</h1>
-            <button onClick={sendData}>send</button>
         </>
     )
 }

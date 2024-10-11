@@ -16,13 +16,19 @@
     /*border-radius: 20px;*/
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .imagesoo {
+        width: 100%;
+        float: none;
+        border-radius: 0;
+    }
 
-
-.container2 {
-    background-color: #030318;
-    box-shadow: 0px -10px 10px #030318, 0px 10px 10px #030318;
-                
-
+    .container1, .container2, .container3 {
+        flex-direction: column;
+        margin-top: 2em;
+        background-color: rgba(0, 0, 0, 0.411);
+    }
 }
 
 .tekstje {

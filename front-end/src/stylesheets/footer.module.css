@@ -1,7 +1,7 @@
-.footerdiv{
+.footerdiv {
     background-color: #030318;
-    margin-bottom: 0px;
     padding-bottom: 0px;
+    margin-top: auto; /* Pushes the footer to the bottom */
 }
 
 .footerp {
@@ -9,4 +9,21 @@
     font-weight: bold;
     margin-top: 0px;
     padding-top: 0px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+}
+
+.main-content {
+    flex: 1;
 }
