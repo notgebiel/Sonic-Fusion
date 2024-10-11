@@ -18,11 +18,11 @@ export default function OverOns() {
             <div className="container1">
                 <img src={image1} alt="Image 1" className="imagesoo" />
                 <div className="content">
-                    <h2>Title 1</h2>
+                    <h2>foto van milo alleen</h2>
                     <p>Description for image 1.</p>
                 </div>
             </div>
-            <div className="container2">
+           {/* <div className="container2">
                 <img src={image2} alt="Image 2" className="imagesoo" />
                 <div className="content">
                     <h2>Title 2</h2>
@@ -35,7 +35,7 @@ export default function OverOns() {
                     <h2>Title 3</h2>
                     <p>Description for image 3.</p>
                 </div>
-            </div>
+            </div>*/}
             
         </div>
     );
